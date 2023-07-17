@@ -9,7 +9,9 @@ print("""
       say thank you for useing this app. \n
       
       \t1. if you wana to make a normal password, first enter the 'N' and second
-           enter the limit you want.
+           enter the limit you want.\n
+      \t2. if you wana to make a Strong password, first enter the 'S' and second
+           enter the limit you want.\n
       """)
 
 upperCaseAlphabet = "abcdefghijklmnopqrstuvwxyz" # list of Elements
@@ -61,6 +63,30 @@ def NormalPassword(limit, elements):
     
     return lastResult
 
+# normal password creator
+def StrongPassword(limit, elements):
+    
+    rowPassword = ""
+    
+    for element in elements:
+        
+        rowPassword += element
+        
+        if "1" in element:
+            
+           rowPassword += element 
+           
+    rowPassword = ShuffleJoiner(rowPassword)
+    
+    lastResult = Limiter(limit, rowPassword)
+    
+    return lastResult
+
+# conditions for recognise to create which type password
 if userChose == "N":
     
     print("you're password is:",NormalPassword(passwordLimit, [upperCaseAlphabet,numbers]))
+
+elif userChose == "S":
+    
+    print("you're password is:",NormalPassword(passwordLimit, [upperCaseAlphabet,numbers,symbols,lowerCaseAlphabet]))
