@@ -42,8 +42,6 @@ def NormalPassword(limit, elements):
     
     rowPassword = ""
     
-    lengthOfElements = len(elements)
-    
     for element in elements:
         
         rowPassword += element
