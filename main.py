@@ -1,5 +1,7 @@
 import os
 
+import time
+
 from random import shuffle
 
 print("""
@@ -150,4 +152,24 @@ elif userChose == "L":
             
             passwordCase.extend(symbols) 
     
-    print(PasswordList(passwordLimit, passwordLength, passwordCase))
+    createdListOfPassword = PasswordList(passwordLimit, passwordLength, passwordCase)
+    
+    nameOfPasswordList = "password-list-number-" + str(int(time.time())) + ".txt"
+    
+    file = open(nameOfPasswordList,"w")
+    
+    for password in createdListOfPassword:
+        
+        file.write(password)
+        
+        file.write("\n")
+        
+    file.close
+    
+    someOfPasswords = createdListOfPassword[0:int(len(createdListOfPassword)/4)]
+    
+    print("Those are some of your password see more in password list file -->", nameOfPasswordList)
+    
+    for password in someOfPasswords:
+        
+        print(password)
