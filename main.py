@@ -9,9 +9,9 @@ print("""
       say thank you for useing this app. \n
       
       \t1. if you wana to make a normal password, first enter the 'N' and second
-           enter the limit you want.\n
+           enter the limit you want. ^Attention! normal password created just with alphabets and numbers.^\n
       \t2. if you wana to make a Strong password, first enter the 'S' and second
-           enter the limit you want.\n
+           enter the limit you want. ^Attention! strong password created with alphabets, symbols and numbers.^\n
       """)
 
 upperCaseAlphabet = "abcdefghijklmnopqrstuvwxyz" # list of Elements
