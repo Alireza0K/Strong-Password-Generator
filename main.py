@@ -7,6 +7,8 @@ print("""
       this is strong password generator, this console app can make best password for you.\n
       in the below i describe how you can use this app but let me to
       say thank you for useing this app. \n
+      
+      \t1. if you wana to make a normal password, enter the limit you want.
       """)
 
 upperCaseAlphabet = "abcdefghijklmnopqrstuvwxyz" # list of Elements
